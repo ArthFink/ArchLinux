@@ -61,6 +61,11 @@ keys = [
 
     #Change keyboard layout
     Key([mod], "space", lazy.spawn("./Scripts/kbdlayout.sh")),
+
+    #File Explorer
+    Key([mod],"e",lazy.spawn("thunar")),    
+    Key([mod,"shift"],"e",lazy.spawn("sudo thunar")),
+
 ]
 
 
@@ -69,7 +74,7 @@ groups = [
     Group("2", matches=[Match(wm_class=["firefox"])], label=""),
     Group("3", matches=[Match(wm_class=["code-oss"])], label=""),
     Group("4", label=""),
-    Group("5", label=""),
+   # Group("5",matches=[Match(wm_class=['chrom'])] label=""),
     ]
 
 for i in groups:
@@ -253,12 +258,7 @@ screens = [Screen(top=bar.Bar([
                 update_interval=1,      
                 show_short_text='false',
                 ),
-                        
-                widget.Wallpaper(
-                        directory='',
-                ),
-
-
+               
                 ],
             size=24,
         ),
@@ -310,6 +310,8 @@ def wallpaper():
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+    os.system('./Scripts/setWallpaper')
+    os.system('setxkbmap de')
 
 
 

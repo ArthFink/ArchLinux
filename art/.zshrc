@@ -100,3 +100,6 @@ source $ZSH/oh-my-zsh.sh
 alias a="acpi"
 alias wl="sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.conf"
 alias dh="sudo dhcpcd wlo1"
+alias vq='vim .config/qtile/config.py'
+alias de='setxkbmap de'
+alias bl='bluetoothctl'

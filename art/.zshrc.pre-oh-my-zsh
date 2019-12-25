@@ -24,6 +24,7 @@ alias wl='sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.c
 alias dh='sudo dhcpcd wlo1'
 alias a='sudo acpi'
 alias de='setxkbmap de'
+alias vq='vim .config/qtile/config.py'
 #$HOME'
 
 # Variables
