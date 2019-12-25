@@ -235,7 +235,7 @@ screens = [
                     fontsize=37),
                 
                 widget.TextBox(
-                    text=' ', 
+                        text='🔋',
                     background="88c0d0",
                     foreground="2e3440",
                     padding=2),
@@ -244,21 +244,15 @@ screens = [
                  update_inverval=5,
                  battery="BAT0",
                  format='{char} {percent:2.0%} ',
-                 
-                 #charge_char='⚡' ',
-                 charge_char='⇧ ',
-    
+                # charge_char='⇧ ', 
+                 charge_char=u"\U0001F50C",
                  discharge_char='⇩',
                  empty_char='☐',
-                full_char='⚡', 
-
-                
-
+                 full_char= u"\U0001F50B",             
                  background="88c0d0",
                  foreground="2e3440",
                  padding=4,
-                 update_interval=1,
-            
+                update_interval=1,      
                 show_short_text='false',
                 ),
 
