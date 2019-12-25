@@ -94,10 +94,8 @@ widget_defaults = dict(
 extension_defaults = widget_defaults.copy()
 
 
-screens = [
-    Screen(
-        top=bar.Bar(
-            [
+screens = [Screen(top=bar.Bar([
+
                 widget.GroupBox(
                     background = "2e3440",
                     active = "5e81ac",
@@ -255,12 +253,14 @@ screens = [
                 update_interval=1,      
                 show_short_text='false',
                 ),
+                        
+                widget.Wallpaper(
+                        directory='',
+                ),
 
-            #widget.ThermalSensor(
-             #   tag_sensor='Core 2',
-              #      ),
-            ],
-            24,
+
+                ],
+            size=24,
         ),
     ),
 ]
@@ -300,6 +300,10 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 
 wmname = "LG3D"
+
+def wallpaper():
+    path = '~/background/wallpaper.png'
+    os.system('feh --bg-scale ' + path)
 
 
 @hook.subscribe.startup_once
