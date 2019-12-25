@@ -1,0 +1,2 @@
+setxkbmap de &&
+exec qtile
